@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MovieHub · 全网影视聚合</title>
+  <meta name="description" content="全网影视聚合：一次搜索，查看影视资料、正版平台观看渠道、全网平台直达和免费公版片库。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/discover">🎬 <b>MovieHub</b><span>全网影视聚合</span></a>
+    <form id="searchForm" class="search" autocomplete="off">
+      <input id="q" type="search" placeholder="搜索电影、剧集、动漫…" aria-label="搜索">
+      <button type="submit">搜索</button>
+    </form>
+    <nav class="tabs">
+      <a href="#/discover" data-route="discover">发现</a>
+      <a href="#/archive" data-route="archive">免费片库</a>
+      <a href="#/favs" data-route="favs">收藏</a>
+      <a href="#/settings" data-route="settings">设置</a>
+    </nav>
+  </header>
+
+  <main id="view"></main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-mask" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="关闭">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <footer>
+    本站不存储任何视频文件。影视资料来自 <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a>，
+    正版观看渠道数据由 <a href="https://www.justwatch.com" target="_blank" rel="noopener">JustWatch</a> 提供，
+    免费影片来自 <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a> 公有领域馆藏。
+    <br>This product uses the TMDB API but is not endorsed or certified by TMDB.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
